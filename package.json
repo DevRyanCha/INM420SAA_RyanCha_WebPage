@@ -2,8 +2,8 @@
   "name": "inm420saa_ryancha_webpage",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "start": "lite-server"
+   "scripts": {
+    "start": "lite-server --baseDir=public"
   },
   "keywords": [],
   "author": "",
