@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Web Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+    .hero {
+      background: #fff3e0;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .hero span.cool {
+      color: #00bcd4;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 150px;
+      gap: 15px;
+      padding: 30px;
+    }
+    .image-grid .item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+    .item.large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .item .caption {
+      position: absolute;
+      z-index: 2;
+      font-size: 1.2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+    .features, .pricing, .footer {
+      padding: 40px 20px;
+    }
+    .footer {
+      background: #f8f8f8;
+    }
+    @media (max-width: 768px) {
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .contact-form {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header + Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+    <a class="navbar-brand" href="#">Grid</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">How it works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Who we are</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">What we do</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+        <li class="nav-item"><a class="btn btn-primary" href="#">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Combine <span class="cool">fine</span> images<br>To represent a product</h1>
+
+    <!-- Image Grid (Placeholder layout) -->
+    <div class="image-grid container">
+      <div class="item large">
+        <span class="caption">Consider it done!</span>
+      </div>
+      <div class="item">
+        <span class="caption">See my goal?</span>
+      </div>
+      <div class="item">
+        <span class="caption">A</span>
+      </div>
+      <div class="item">
+        <span class="caption">Shoe</span>
+      </div>
+      <div class="item">
+        <span class="caption">Design Book</span>
+      </div>
+      <div class="item">
+        <span class="caption">Grid Box</span>
+      </div>
+      <div class="item">
+        <span class="caption">HQ Template</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
